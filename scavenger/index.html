@@ -19,7 +19,7 @@
 <meta name="application-name" content="gr4n173">
 <meta name="apple-mobile-web-app-title" content="gr4n173"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://example.com/scavenger/" /><link rel="prev" href="http://example.com/zetta/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://example.com/scavenger/" /><link rel="prev" href="http://example.com/zetta/" /><link rel="next" href="http://example.com/nephack3/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -116,7 +116,7 @@
 <main class="main">
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">Contents</h2>
-            <div class="toc-content always-active" id="toc-content-auto"></div>
+            <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Scavenger</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://gr4n173.github.io" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>gr4n173</a></span>&nbsp;<span class="post-category">included in <a href="/categories/hackthebox/"><i class="far fa-folder fa-fw"></i>Hack The Box</a></span></div>
             <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-02-29">2020-02-29</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;2619 words&nbsp;
@@ -137,17 +137,12 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#htbscavenger">HTB:Scavenger</a></li>
     <li><a href="#box-details">Box Details</a></li>
     <li><a href="#recon">Recon</a>
       <ul>
         <li><a href="#web-enumeration">Web Enumeration</a></li>
         <li><a href="#sqli-in-whois-service">Sqli in WHois Service</a></li>
-        <li><a href="#justanotherbloghtb">justanotherblog.htb</a></li>
-        <li><a href="#pwnhatshtb">pwnhats.htb</a></li>
-        <li><a href="#rentahackerhtb">rentahacker.htb</a></li>
         <li><a href="#subdomain-enumeration">Subdomain Enumeration</a></li>
-        <li><a href="#sec03rentahackerhtb">sec03.rentahacker.htb</a></li>
       </ul>
     </li>
     <li><a href="#rce-as-ib01c03">RCE as ib01c03</a>
@@ -167,7 +162,7 @@
   </ul>
 </nav></div>
             </div><div class="content" id="content"><hr>
-<h2 id="htbscavenger">HTB:Scavenger</h2>
+<h1 id="htbscavenger">HTB:Scavenger</h1>
 <p>Scavenger box was the hardest box after <a href="https://gr4n173.github.io/2020/02/22/htb-zetta.html" target="_blank" rel="noopener noreffer">Zetta</a> box. It falls under linux and hard category. Here, everything was all about enumeration, enumeration and enumeration. I&rsquo;ll approach this write-up how I solved it, along with the problems that I had to face during this box. At first I obtained the user flag using <code>whois</code> service and dns zone transfer(axfr) along with ftp by analyzing the .pcap file then used LKM to read root.txt. I&rsquo;ll show all my payload (including that didn&rsquo;t work in initial deployment to get root).</p>
 <h2 id="box-details">Box Details</h2>
 <p><img
@@ -257,76 +252,76 @@
 </span><span class="lnt">71
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback"># Nmap 7.80 scan initiated Thu Feb 27 23:24:41 2020 as: nmap -sS -sV -sC -Pn -oN nmap.txt 10.10.10.155
-Nmap scan report for www.supersechosting.htb (10.10.10.155)
-Host is up (0.29s latency).
-Not shown: 993 filtered ports
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># Nmap 7.80 scan initiated Thu Feb 27 23:24:41 2020 as: nmap -sS -sV -sC -Pn -oN nmap.txt 10.10.10.155</span>
+Nmap scan report <span class="k">for</span> www.supersechosting.htb <span class="o">(</span>10.10.10.155<span class="o">)</span>
+Host is up <span class="o">(</span>0.29s latency<span class="o">)</span>.
+Not shown: <span class="m">993</span> filtered ports
 PORT   STATE  SERVICE  VERSION
 20/tcp closed ftp-data
 21/tcp open   ftp      vsftpd 3.0.3
-22/tcp open   ssh      OpenSSH 7.4p1 Debian 10+deb9u4 (protocol 2.0)
-| ssh-hostkey: 
-|   2048 df:94:47:03:09:ed:8c:f7:b6:91:c5:08:b5:20:e5:bc (RSA)
-|   256 e3:05:c1:c5:d1:9c:3f:91:0f:c0:35:4b:44:7f:21:9e (ECDSA)
-|_  256 45:92:c0:a1:d9:5d:20:d6:eb:49:db:12:a5:70:b7:31 (ED25519)
+22/tcp open   ssh      OpenSSH 7.4p1 Debian 10+deb9u4 <span class="o">(</span>protocol 2.0<span class="o">)</span>
+<span class="p">|</span> ssh-hostkey: 
+<span class="p">|</span>   <span class="m">2048</span> df:94:47:03:09:ed:8c:f7:b6:91:c5:08:b5:20:e5:bc <span class="o">(</span>RSA<span class="o">)</span>
+<span class="p">|</span>   <span class="m">256</span> e3:05:c1:c5:d1:9c:3f:91:0f:c0:35:4b:44:7f:21:9e <span class="o">(</span>ECDSA<span class="o">)</span>
+<span class="p">|</span>_  <span class="m">256</span> 45:92:c0:a1:d9:5d:20:d6:eb:49:db:12:a5:70:b7:31 <span class="o">(</span>ED25519<span class="o">)</span>
 25/tcp open   smtp     Exim smtpd 4.89
-| smtp-commands: ib01.supersechosting.htb Hello www.supersechosting.htb [10.10.14.243], SIZE 52428800, 8BITMIME, PIPELINING, PRDR, HELP, 
-|_ Commands supported: AUTH HELO EHLO MAIL RCPT DATA BDAT NOOP QUIT RSET HELP 
+<span class="p">|</span> smtp-commands: ib01.supersechosting.htb Hello www.supersechosting.htb <span class="o">[</span>10.10.14.243<span class="o">]</span>, SIZE 52428800, 8BITMIME, PIPELINING, PRDR, HELP, 
+<span class="p">|</span>_ Commands supported: AUTH HELO EHLO MAIL RCPT DATA BDAT NOOP QUIT RSET HELP 
 43/tcp open   whois?
-| fingerprint-strings: 
-|   GenericLines, GetRequest, HTTPOptions, Help, RTSPRequest: 
-|     % SUPERSECHOSTING WHOIS server v0.6beta@MariaDB10.1.37
-|     more information on SUPERSECHOSTING, visit http://www.supersechosting.htb
-|     This query returned 0 object
-|   SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
-|     % SUPERSECHOSTING WHOIS server v0.6beta@MariaDB10.1.37
-|     more information on SUPERSECHOSTING, visit http://www.supersechosting.htb
-|_    1267 (HY000): Illegal mix of collations (utf8mb4_general_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation &#39;like&#39;
-53/tcp open   domain   ISC BIND 9.10.3-P4 (Debian Linux)
-| dns-nsid: 
-|_  bind.version: 9.10.3-P4-Debian
-80/tcp open   http     Apache httpd 2.4.25 ((Debian))
-|_http-server-header: Apache/2.4.25 (Debian)
-|_http-title: SuperSecHosting
-1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
-SF-Port43-TCP:V=7.80%I=7%D=2/27%Time=5E57FEF1%P=x86_64-pc-linux-gnu%r(Gene
-SF:ricLines,A9,&#34;%\x20SUPERSECHOSTING\x20WHOIS\x20server\x20v0\.6beta@Maria
-SF:DB10\.1\.37\r\n%\x20for\x20more\x20information\x20on\x20SUPERSECHOSTING
-SF:,\x20visit\x20http://www\.supersechosting\.htb\r\n%\x20This\x20query\x2
-SF:0returned\x200\x20object\r\n&#34;)%r(GetRequest,A9,&#34;%\x20SUPERSECHOSTING\x2
-SF:0WHOIS\x20server\x20v0\.6beta@MariaDB10\.1\.37\r\n%\x20for\x20more\x20i
-SF:nformation\x20on\x20SUPERSECHOSTING,\x20visit\x20http://www\.supersecho
-SF:sting\.htb\r\n%\x20This\x20query\x20returned\x200\x20object\r\n&#34;)%r(HTT
-SF:POptions,A9,&#34;%\x20SUPERSECHOSTING\x20WHOIS\x20server\x20v0\.6beta@Maria
-SF:DB10\.1\.37\r\n%\x20for\x20more\x20information\x20on\x20SUPERSECHOSTING
-SF:,\x20visit\x20http://www\.supersechosting\.htb\r\n%\x20This\x20query\x2
-SF:0returned\x200\x20object\r\n&#34;)%r(RTSPRequest,A9,&#34;%\x20SUPERSECHOSTING\x
-SF:20WHOIS\x20server\x20v0\.6beta@MariaDB10\.1\.37\r\n%\x20for\x20more\x20
-SF:information\x20on\x20SUPERSECHOSTING,\x20visit\x20http://www\.supersech
-SF:osting\.htb\r\n%\x20This\x20query\x20returned\x200\x20object\r\n&#34;)%r(He
-SF:lp,A9,&#34;%\x20SUPERSECHOSTING\x20WHOIS\x20server\x20v0\.6beta@MariaDB10\.
-SF:1\.37\r\n%\x20for\x20more\x20information\x20on\x20SUPERSECHOSTING,\x20v
-SF:isit\x20http://www\.supersechosting\.htb\r\n%\x20This\x20query\x20retur
-SF:ned\x200\x20object\r\n&#34;)%r(SSLSessionReq,103,&#34;%\x20SUPERSECHOSTING\x20W
-SF:HOIS\x20server\x20v0\.6beta@MariaDB10\.1\.37\r\n%\x20for\x20more\x20inf
-SF:ormation\x20on\x20SUPERSECHOSTING,\x20visit\x20http://www\.supersechost
-SF:ing\.htb\r\n1267\x20\(HY000\):\x20Illegal\x20mix\x20of\x20collations\x2
-SF:0\(utf8mb4_general_ci,IMPLICIT\)\x20and\x20\(utf8_general_ci,COERCIBLE\
-SF:)\x20for\x20operation\x20&#39;like&#39;&#34;)%r(TerminalServerCookie,103,&#34;%\x20SUPE
-SF:RSECHOSTING\x20WHOIS\x20server\x20v0\.6beta@MariaDB10\.1\.37\r\n%\x20fo
-SF:r\x20more\x20information\x20on\x20SUPERSECHOSTING,\x20visit\x20http://w
-SF:ww\.supersechosting\.htb\r\n1267\x20\(HY000\):\x20Illegal\x20mix\x20of\
-SF:x20collations\x20\(utf8mb4_general_ci,IMPLICIT\)\x20and\x20\(utf8_gener
-SF:al_ci,COERCIBLE\)\x20for\x20operation\x20&#39;like&#39;&#34;)%r(TLSSessionReq,103,&#34;
-SF:%\x20SUPERSECHOSTING\x20WHOIS\x20server\x20v0\.6beta@MariaDB10\.1\.37\r
-SF:\n%\x20for\x20more\x20information\x20on\x20SUPERSECHOSTING,\x20visit\x2
-SF:0http://www\.supersechosting\.htb\r\n1267\x20\(HY000\):\x20Illegal\x20m
-SF:ix\x20of\x20collations\x20\(utf8mb4_general_ci,IMPLICIT\)\x20and\x20\(u
-SF:tf8_general_ci,COERCIBLE\)\x20for\x20operation\x20&#39;like&#39;&#34;);
-Service Info: Host: ib01.supersechosting.htb; OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+<span class="p">|</span> fingerprint-strings: 
+<span class="p">|</span>   GenericLines, GetRequest, HTTPOptions, Help, RTSPRequest: 
+<span class="p">|</span>     % SUPERSECHOSTING WHOIS server v0.6beta@MariaDB10.1.37
+<span class="p">|</span>     more information on SUPERSECHOSTING, visit http://www.supersechosting.htb
+<span class="p">|</span>     This query returned <span class="m">0</span> object
+<span class="p">|</span>   SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
+<span class="p">|</span>     % SUPERSECHOSTING WHOIS server v0.6beta@MariaDB10.1.37
+<span class="p">|</span>     more information on SUPERSECHOSTING, visit http://www.supersechosting.htb
+<span class="p">|</span>_    <span class="m">1267</span> <span class="o">(</span>HY000<span class="o">)</span>: Illegal mix of collations <span class="o">(</span>utf8mb4_general_ci,IMPLICIT<span class="o">)</span> and <span class="o">(</span>utf8_general_ci,COERCIBLE<span class="o">)</span> <span class="k">for</span> operation <span class="s1">&#39;like&#39;</span>
+53/tcp open   domain   ISC BIND 9.10.3-P4 <span class="o">(</span>Debian Linux<span class="o">)</span>
+<span class="p">|</span> dns-nsid: 
+<span class="p">|</span>_  bind.version: 9.10.3-P4-Debian
+80/tcp open   http     Apache httpd 2.4.25 <span class="o">((</span>Debian<span class="o">))</span>
+<span class="p">|</span>_http-server-header: Apache/2.4.25 <span class="o">(</span>Debian<span class="o">)</span>
+<span class="p">|</span>_http-title: SuperSecHosting
+<span class="m">1</span> service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port43-TCP:V<span class="o">=</span>7.80%I<span class="o">=</span>7%D<span class="o">=</span>2/27%Time<span class="o">=</span>5E57FEF1%P<span class="o">=</span>x86_64-pc-linux-gnu%r<span class="o">(</span>Gene
+SF:ricLines,A9,<span class="s2">&#34;%\x20SUPERSECHOSTING\x20WHOIS\x20server\x20v0\.6beta@Maria
+</span><span class="s2">SF:DB10\.1\.37\r\n%\x20for\x20more\x20information\x20on\x20SUPERSECHOSTING
+</span><span class="s2">SF:,\x20visit\x20http://www\.supersechosting\.htb\r\n%\x20This\x20query\x2
+</span><span class="s2">SF:0returned\x200\x20object\r\n&#34;</span><span class="o">)</span>%r<span class="o">(</span>GetRequest,A9,<span class="s2">&#34;%\x20SUPERSECHOSTING\x2
+</span><span class="s2">SF:0WHOIS\x20server\x20v0\.6beta@MariaDB10\.1\.37\r\n%\x20for\x20more\x20i
+</span><span class="s2">SF:nformation\x20on\x20SUPERSECHOSTING,\x20visit\x20http://www\.supersecho
+</span><span class="s2">SF:sting\.htb\r\n%\x20This\x20query\x20returned\x200\x20object\r\n&#34;</span><span class="o">)</span>%r<span class="o">(</span>HTT
+SF:POptions,A9,<span class="s2">&#34;%\x20SUPERSECHOSTING\x20WHOIS\x20server\x20v0\.6beta@Maria
+</span><span class="s2">SF:DB10\.1\.37\r\n%\x20for\x20more\x20information\x20on\x20SUPERSECHOSTING
+</span><span class="s2">SF:,\x20visit\x20http://www\.supersechosting\.htb\r\n%\x20This\x20query\x2
+</span><span class="s2">SF:0returned\x200\x20object\r\n&#34;</span><span class="o">)</span>%r<span class="o">(</span>RTSPRequest,A9,<span class="s2">&#34;%\x20SUPERSECHOSTING\x
+</span><span class="s2">SF:20WHOIS\x20server\x20v0\.6beta@MariaDB10\.1\.37\r\n%\x20for\x20more\x20
+</span><span class="s2">SF:information\x20on\x20SUPERSECHOSTING,\x20visit\x20http://www\.supersech
+</span><span class="s2">SF:osting\.htb\r\n%\x20This\x20query\x20returned\x200\x20object\r\n&#34;</span><span class="o">)</span>%r<span class="o">(</span>He
+SF:lp,A9,<span class="s2">&#34;%\x20SUPERSECHOSTING\x20WHOIS\x20server\x20v0\.6beta@MariaDB10\.
+</span><span class="s2">SF:1\.37\r\n%\x20for\x20more\x20information\x20on\x20SUPERSECHOSTING,\x20v
+</span><span class="s2">SF:isit\x20http://www\.supersechosting\.htb\r\n%\x20This\x20query\x20retur
+</span><span class="s2">SF:ned\x200\x20object\r\n&#34;</span><span class="o">)</span>%r<span class="o">(</span>SSLSessionReq,103,<span class="s2">&#34;%\x20SUPERSECHOSTING\x20W
+</span><span class="s2">SF:HOIS\x20server\x20v0\.6beta@MariaDB10\.1\.37\r\n%\x20for\x20more\x20inf
+</span><span class="s2">SF:ormation\x20on\x20SUPERSECHOSTING,\x20visit\x20http://www\.supersechost
+</span><span class="s2">SF:ing\.htb\r\n1267\x20\(HY000\):\x20Illegal\x20mix\x20of\x20collations\x2
+</span><span class="s2">SF:0\(utf8mb4_general_ci,IMPLICIT\)\x20and\x20\(utf8_general_ci,COERCIBLE\
+</span><span class="s2">SF:)\x20for\x20operation\x20&#39;like&#39;&#34;</span><span class="o">)</span>%r<span class="o">(</span>TerminalServerCookie,103,<span class="s2">&#34;%\x20SUPE
+</span><span class="s2">SF:RSECHOSTING\x20WHOIS\x20server\x20v0\.6beta@MariaDB10\.1\.37\r\n%\x20fo
+</span><span class="s2">SF:r\x20more\x20information\x20on\x20SUPERSECHOSTING,\x20visit\x20http://w
+</span><span class="s2">SF:ww\.supersechosting\.htb\r\n1267\x20\(HY000\):\x20Illegal\x20mix\x20of\
+</span><span class="s2">SF:x20collations\x20\(utf8mb4_general_ci,IMPLICIT\)\x20and\x20\(utf8_gener
+</span><span class="s2">SF:al_ci,COERCIBLE\)\x20for\x20operation\x20&#39;like&#39;&#34;</span><span class="o">)</span>%r<span class="o">(</span>TLSSessionReq,103,<span class="s2">&#34;
+</span><span class="s2">SF:%\x20SUPERSECHOSTING\x20WHOIS\x20server\x20v0\.6beta@MariaDB10\.1\.37\r
+</span><span class="s2">SF:\n%\x20for\x20more\x20information\x20on\x20SUPERSECHOSTING,\x20visit\x2
+</span><span class="s2">SF:0http://www\.supersechosting\.htb\r\n1267\x20\(HY000\):\x20Illegal\x20m
+</span><span class="s2">SF:ix\x20of\x20collations\x20\(utf8mb4_general_ci,IMPLICIT\)\x20and\x20\(u
+</span><span class="s2">SF:tf8_general_ci,COERCIBLE\)\x20for\x20operation\x20&#39;like&#39;&#34;</span><span class="o">)</span><span class="p">;</span>
+Service Info: Host: ib01.supersechosting.htb<span class="p">;</span> OSs: Unix, Linux<span class="p">;</span> CPE: cpe:/o:linux:linux_kernel
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Thu Feb 27 23:26:45 2020 -- 1 IP address (1 host up) scanned in 123.59 seconds
+<span class="c1"># Nmap done at Thu Feb 27 23:26:45 2020 -- 1 IP address (1 host up) scanned in 123.59 seconds</span>
 
 </code></pre></td></tr></table>
 </div>
@@ -460,7 +455,7 @@ modify existing registrations; the Data in VeriSign Global Registry
 10.10.10.155    www.pwnhats.htb www.rentahacker.htb www.justanotherblog.htb www.supersechosting.htb
 </code></pre></td></tr></table>
 </div>
-</div><h3 id="justanotherbloghtb">justanotherblog.htb</h3>
+</div><p><strong>justanotherblog.htb</strong></p>
 <p><figure><a class="lightgallery" href="/scavenger/public/images/justanotherblog.jpg" title="justanotherblog" data-thumbnail="/scavenger/public/images/justanotherblog.jpg" data-sub-html="<h2>justanotherblog</h2><p>justanotherblog</p>">
         <img
             class="lazyload"
@@ -471,7 +466,7 @@ modify existing registrations; the Data in VeriSign Global Registry
             alt="/scavenger/public/images/justanotherblog.jpg" />
     </a><figcaption class="image-caption">justanotherblog</figcaption>
     </figure></p>
-<h3 id="pwnhatshtb">pwnhats.htb</h3>
+<p><strong>pwnhats.htb</strong></p>
 <p><img
         class="lazyload"
         src="/svg/loading.min.svg"
@@ -480,7 +475,7 @@ modify existing registrations; the Data in VeriSign Global Registry
         data-sizes="auto"
         alt="/scavenger/public/images/pwnhats.jpg"
         title="pwnhats" /></p>
-<h3 id="rentahackerhtb">rentahacker.htb</h3>
+<p><strong>rentahacker.htb</strong></p>
 <p><figure><a class="lightgallery" href="/scavenger/public/images/rentahacker.jpg" title="rentahacker website" data-thumbnail="/scavenger/public/images/rentahacker.jpg" data-sub-html="<h2>rentahacker website</h2><p>rentahacker website</p>">
         <img
             class="lazyload"
@@ -532,7 +527,7 @@ rentahacker.htb.        604800  IN      SOA     ns1.supersechosting.htb. root.su
 </code></pre></td></tr></table>
 </div>
 </div><p>Since 10.10.10.155 was ip here I used it as name server and rentahacker.htb as a url for dns zone transfer using axfr. Now <code>sec03.rentahacker.htb</code> was added in <code>/etc/hosts</code>too.</p>
-<h3 id="sec03rentahackerhtb">sec03.rentahacker.htb</h3>
+<p><strong>sec03.rentahacker.htb</strong></p>
 <p><img
         class="lazyload"
         src="/svg/loading.min.svg"
@@ -951,7 +946,8 @@ Tweet about this writeup if you like.</p>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/zetta/" class="prev" rel="prev" title="Zetta"><i class="fas fa-angle-left fa-fw"></i>Zetta</a></div>
+    <div class="post-nav"><a href="/zetta/" class="prev" rel="prev" title="Zetta"><i class="fas fa-angle-left fa-fw"></i>Zetta</a>
+            <a href="/nephack3/" class="next" rel="next" title="Nephack 3.0">Nephack 3.0<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.

@@ -1,7 +1,7 @@
 # Scavenger
 
 ---
-## HTB:Scavenger
+# HTB:Scavenger
 
 Scavenger box was the hardest box after [Zetta](https://gr4n173.github.io/2020/02/22/htb-zetta.html) box. It falls under linux and hard category. Here, everything was all about enumeration, enumeration and enumeration. I'll approach this write-up how I solved it, along with the problems that I had to face during this box. At first I obtained the user flag using `whois` service and dns zone transfer(axfr) along with ftp by analyzing the .pcap file then used LKM to read root.txt. I'll show all my payload (including that didn't work in initial deployment to get root).
 
@@ -18,7 +18,7 @@ In above picture it's ip is 10.10.10.155, I added it to /etc/hosts as scavenger.
 Let's start with our universal port scanner, `nmap` to see the open port and service which shows 
 
 
-```
+```bash
 # Nmap 7.80 scan initiated Thu Feb 27 23:24:41 2020 as: nmap -sS -sV -sC -Pn -oN nmap.txt 10.10.10.155
 Nmap scan report for www.supersechosting.htb (10.10.10.155)
 Host is up (0.29s latency).
@@ -161,15 +161,15 @@ From above output of WHOIS command I got three more `dns` as` www.justanotherblo
 root@gr4n173:~$ cat /etc/hosts
 10.10.10.155    www.pwnhats.htb www.rentahacker.htb www.justanotherblog.htb www.supersechosting.htb
 ```
-### justanotherblog.htb
+**justanotherblog.htb**
 
 ![justanotherblog](public/images/justanotherblog.jpg "justanotherblog")
 
-### pwnhats.htb
+**pwnhats.htb**
 
 ![pwnhats](public/images/pwnhats.jpg)
 
-### rentahacker.htb
+**rentahacker.htb**
 
 ![rentahacker website](public/images/rentahacker.jpg "rentahacker website")
 
@@ -198,7 +198,7 @@ rentahacker.htb.        604800  IN      SOA     ns1.supersechosting.htb. root.su
 ```
 Since 10.10.10.155 was ip here I used it as name server and rentahacker.htb as a url for dns zone transfer using axfr. Now `sec03.rentahacker.htb` was added in `/etc/hosts`too.
 
-### sec03.rentahacker.htb
+**sec03.rentahacker.htb**
 
 ![sec03page](public/images/sec03_page.jpg)
 
