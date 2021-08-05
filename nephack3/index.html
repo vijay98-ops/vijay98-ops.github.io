@@ -9,12 +9,11 @@
 <meta property="og:description" content="Here I will explain one of the challenge from NepHack 3.0 CTF ." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://example.com/nephack3/" />
-<meta property="og:image" content="http://example.com/logo.png"/>
+<meta property="og:image" content="http://example.com/nephack3/featured-image.png"/>
 <meta property="article:published_time" content="2020-03-07T23:29:01+08:00" />
 <meta property="article:modified_time" content="2020-03-07T06:45:01+08:00" />
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="http://example.com/logo.png"/>
-
+<meta name="twitter:image" content="http://example.com/nephack3/featured-image.png"/>
 <meta name="twitter:title" content="Nephack 3.0"/>
 <meta name="twitter:description" content="Here I will explain one of the challenge from NepHack 3.0 CTF ."/>
 <meta name="application-name" content="gr4n173">
@@ -31,10 +30,10 @@
             "@id": "http:\/\/example.com\/nephack3\/"
         },"image": [{
                             "@type": "ImageObject",
-                            "url": "http:\/\/example.com\/images\/Apple-Devices-Preview.png",
-                            "width":  3200 ,
-                            "height":  2048 
-                        }],"genre": "posts","keywords": "linux, nephack3, ctf, binaryexploitation, gdb, pwnables","wordcount":  790 ,
+                            "url": "http:\/\/example.com\/nephack3\/featured-image.png",
+                            "width":  1133 ,
+                            "height":  680 
+                        }],"genre": "posts","keywords": "linux, nephack3, ctf, binaryexploitation, gdb, pwnables","wordcount":  822 ,
         "url": "http:\/\/example.com\/nephack3\/","datePublished": "2020-03-07T23:29:01+08:00","dateModified": "2020-03-07T06:45:01+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": {
@@ -120,11 +119,18 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Nephack 3.0</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://gr4n173.github.io" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>gr4n173</a></span>&nbsp;<span class="post-category">included in <a href="/categories/ctf/"><i class="far fa-folder fa-fw"></i>CTF</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-03-07">2020-03-07</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;790 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-03-07">2020-03-07</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;822 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;4 minutes&nbsp;<span id="/nephack3/" class="leancloud_visitors" data-flag-title="Nephack 3.0">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;views
                     </span>&nbsp;</div>
-        </div><div class="details toc" id="toc-static"  kept="">
+        </div><div class="featured-image"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/nephack3/featured-image.png"
+        data-srcset="/nephack3/featured-image.png, /nephack3/featured-image.png 1.5x, /nephack3/featured-image.png 2x"
+        data-sizes="auto"
+        alt="/nephack3/featured-image.png"
+        title="Here I will explain one of the challenge from NepHack 3.0 CTF ." /></div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
                     <span>Contents</span>
                     <span><i class="details-icon fas fa-angle-right"></i></span>
@@ -136,7 +142,8 @@
     <li><a href="#duffer">Duffer</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="introduction">Introduction</h2>
+            </div><div class="content" id="content"><p>Actually NepHack is one of the Biggest Hacking Competition of Nepal after <a href="https://threatcon.io/" target="_blank" rel="noopener noreffer">threatcon</a> which is especially CTF (Jeopardy type) competition which is held annually every year in K.U.( Kathmandu University), Dhulikhel, Nepal.</p>
+<h2 id="introduction">Introduction</h2>
 <p>Actually NepHack is one of the Biggest Hacking Competition of Nepal after <a href="https://threatcon.io/" target="_blank" rel="noopener noreffer">threatcon</a> which is especially CTF (Jeopardy type) competition which is held annually every year in K.U.( Kathmandu University), Dhulikhel, Nepal. But unfortunately this year due to some internal problem of K.U NepHack 3.0 was held in premises of <a href="https://cynicaltechnology.com/" target="_blank" rel="noopener noreffer">Cynical Technology</a> .</p>
 <p>Event happened at Jan 25–26,2020 but unfortunately I wasn’t able to attend due to my work . Luckily they decided to went live for 48 hours to play online(nephack.io)after 2 days of the event and I would like to thank Cynical Technology for it.</p>
 <p>During that live session, I was able to secure first position but at last hour i.e. 10:00 pm I was downgraded to 2nd position by team caphilates but the score was equal. I would like to Congratulate team caphilates for winning the NepHack 3.0 online.</p>
@@ -327,8 +334,7 @@ This way I got the offset. Then, I had to find the function where flag is locate
 <p>Fig:- <em>Flag</em></p>
 <p>This way I got the flag as <code>cynical_flag{hacker_kto_mah}</code> and got 495 points.</p>
 <p>I wanted to thank all readers for being with me through my post and I will be posting other walkthrough of NepHack 3.0 challenges soon.
-At last, I would like to acknowledge brother <a href="https://twitter.com/maskop9" target="_blank" rel="noopener noreffer">@maskop9</a> for helping through out the competition and other helping hands along with the organizer Cynical Technology for awesome platform seems like they too have bugbounty platform as bugv.io :)</p>
-</div><div class="post-footer" id="post-footer">
+At last, I would like to acknowledge brother <a href="https://twitter.com/maskop9" target="_blank" rel="noopener noreffer">@maskop9</a> for helping through out the competition and other helping hands along with the organizer Cynical Technology for awesome platform seems like they too have bugbounty platform as bugv.io :)</p></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">

@@ -1,5 +1,8 @@
 # Zetta
 
+
+Zetta box was the hardes box till I have done. It falls under linux and hard category. Here I will explain my path for Zetta box from the Hack The Box.
+<!--more-->
 ---
 # HTB:Zetta
 

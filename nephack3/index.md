@@ -2,6 +2,9 @@
 
 
 
+Actually NepHack is one of the Biggest Hacking Competition of Nepal after [threatcon](https://threatcon.io/) which is especially CTF (Jeopardy type) competition which is held annually every year in K.U.( Kathmandu University), Dhulikhel, Nepal.
+<!--more-->
+
 ## Introduction
 
 Actually NepHack is one of the Biggest Hacking Competition of Nepal after [threatcon](https://threatcon.io/) which is especially CTF (Jeopardy type) competition which is held annually every year in K.U.( Kathmandu University), Dhulikhel, Nepal. But unfortunately this year due to some internal problem of K.U NepHack 3.0 was held in premises of [Cynical Technology](https://cynicaltechnology.com/) .

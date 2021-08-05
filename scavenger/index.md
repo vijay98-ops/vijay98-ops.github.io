@@ -1,5 +1,9 @@
 # Scavenger
 
+
+Scavenger box was the hardes after [Zetta](https://gr4n173.github.io/zetta) box. It falls under linux and hard category. Here I will explain my path for Scavenger box from the Hack The Box.
+<!--more-->
+
 ---
 # HTB:Scavenger
 

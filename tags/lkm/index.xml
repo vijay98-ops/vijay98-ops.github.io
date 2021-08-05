@@ -9,6 +9,6 @@
     <pubDate>Sat, 29 Feb 2020 21:29:01 &#43;0800</pubDate>
     <author>Author</author>
     <guid>http://example.com/scavenger/</guid>
-    <description><![CDATA[HTB:Scavenger Scavenger box was the hardest box after Zetta box. It falls under linux and hard category. Here, everything was all about enumeration, enumeration and enumeration. I&rsquo;ll approach this write-up how I solved it, along with the problems that I had to face during this box. At first I obtained the user flag using whois service and dns zone transfer(axfr) along with ftp by analyzing the .pcap file then used LKM to read root.]]></description>
+    <description><![CDATA[<p>Scavenger box was the hardes after <a href="https://gr4n173.github.io/zetta" target="_blank" rel="noopener noreffer">Zetta</a> box. It falls under linux and hard category. Here I will explain my path for Scavenger box from the Hack The Box.</p>]]></description>
 </item></channel>
 </rss>
