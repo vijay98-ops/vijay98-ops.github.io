@@ -2,6 +2,7 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
+            <loc>http://example.com/scavenger/</loc><lastmod>2020-02-29T21:29:01&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>http://example.com/zetta/</loc><lastmod>2020-02-25T08:45:01&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>http://example.com/welcomeblog/</loc><lastmod>2019-04-17T20:45:01&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>http://example.com/moee-1/</loc><lastmod>2020-11-01T17:55:28&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
@@ -54,12 +55,18 @@
             <loc>http://example.com/tags/linux/</loc><lastmod>2020-05-01T17:55:28&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>http://example.com/tags/port-forward/</loc><lastmod>2020-05-01T17:55:28&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>http://example.com/tags/restic-server/</loc><lastmod>2020-05-01T17:55:28&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://example.com/tags/ftp/</loc><lastmod>2020-02-25T08:45:01&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://example.com/tags/ffuf/</loc><lastmod>2020-02-29T21:29:01&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://example.com/tags/ftp/</loc><lastmod>2020-02-29T21:29:01&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://example.com/tags/fuzz/</loc><lastmod>2020-02-29T21:29:01&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://example.com/tags/lkm/</loc><lastmod>2020-02-29T21:29:01&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://example.com/tags/pcap/</loc><lastmod>2020-02-29T21:29:01&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://example.com/tags/re/</loc><lastmod>2020-02-29T21:29:01&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://example.com/tags/sqli/</loc><lastmod>2020-02-29T21:29:01&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://example.com/tags/whois/</loc><lastmod>2020-02-29T21:29:01&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>http://example.com/tags/ipv6/</loc><lastmod>2020-02-25T08:45:01&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>http://example.com/tags/postgres/</loc><lastmod>2020-02-25T08:45:01&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>http://example.com/tags/rce/</loc><lastmod>2020-02-25T08:45:01&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>http://example.com/tags/rsync/</loc><lastmod>2020-02-25T08:45:01&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://example.com/tags/sqli/</loc><lastmod>2020-02-25T08:45:01&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>http://example.com/about/</loc><lastmod>2020-01-02T11:04:49&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>http://example.com/categories/hello-world/</loc><lastmod>2019-04-17T20:45:01&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>http://example.com/tags/welcome-introduction/</loc><lastmod>2019-04-17T20:45:01&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>

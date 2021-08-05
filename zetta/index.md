@@ -5,7 +5,7 @@
 
 Zetta box was the hardest box till I have done. It falls under linux and hard category. Especially to read the root flag is a quite tough one. I'll approach this write-up how I solved it, along with the problems that I had to face during this box. At first I obtained the user flag using ipv6 and rsync service by uploading my authorized_keys then I used postgres along with logger to read root.txt .I'll show all my payload(including that didn't work in initial deployment to get the root).
 
-# Box Details
+## Box Details
 
 ![description of the box](public/images/description_box.png "Description of the box")
 
@@ -14,7 +14,7 @@ In above picture it's ip is `10.10.10.156`, I added it to `/etc/hosts` as `zetta
 
 ---
 
-# Recon
+## Recon
 
 Let's start with our universal port scanner `nmap` to see the open port and service which shows FTP(TCP 21),SSH(TCP 22) and HTTP(TCP 80).
 
@@ -40,7 +40,7 @@ Service detection performed. Please report any incorrect results at https://nmap
 Nmap done at Sat Jan 25 22:30:28 2020 -- 1 IP address (1 host up) scanned in 59.55 seconds
 
 ```
-## Web Enumeration
+### Web Enumeration
 **_zetta.htb_**
 
 After I noticed port 80 `http` opened I visited that site and got this as output.
@@ -55,7 +55,7 @@ Then, I searched every part of this website and found something interesting thin
 and also the credentials username/password for FTP service as below.
 ![Details of FTP](public/images/ftp_details.jpg "Details of FTP)
 
-## FTP
+### FTP
 
 With this detail I m into the `FTP` server now as.
 
@@ -218,7 +218,7 @@ a575bdb*************************
 ```
 
 
-## **Postgresql Exploit**
+### Postgresql Exploit
 
 After I got user.txt i.e. roy shell ,I found .tudu.xml file in home directory of roy where many to do list was written.
 

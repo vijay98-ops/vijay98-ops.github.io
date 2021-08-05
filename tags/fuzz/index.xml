@@ -1,0 +1,14 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>fuzz - Tag - gr4n173</title>
+        <link>http://example.com/tags/fuzz/</link>
+        <description>fuzz - Tag - gr4n173</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 29 Feb 2020 21:29:01 &#43;0800</lastBuildDate><atom:link href="http://example.com/tags/fuzz/" rel="self" type="application/rss+xml" /><item>
+    <title>Scavenger</title>
+    <link>http://example.com/scavenger/</link>
+    <pubDate>Sat, 29 Feb 2020 21:29:01 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>http://example.com/scavenger/</guid>
+    <description><![CDATA[HTB:Scavenger Scavenger box was the hardest box after Zetta box. It falls under linux and hard category. Here, everything was all about enumeration, enumeration and enumeration. I&rsquo;ll approach this write-up how I solved it, along with the problems that I had to face during this box. At first I obtained the user flag using whois service and dns zone transfer(axfr) along with ftp by analyzing the .pcap file then used LKM to read root.]]></description>
+</item></channel>
+</rss>

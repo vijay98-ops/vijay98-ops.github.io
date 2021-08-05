@@ -19,7 +19,7 @@
 <meta name="application-name" content="gr4n173">
 <meta name="apple-mobile-web-app-title" content="gr4n173"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://example.com/zetta/" /><link rel="prev" href="http://example.com/welcomeblog/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://example.com/zetta/" /><link rel="prev" href="http://example.com/welcomeblog/" /><link rel="next" href="http://example.com/scavenger/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -137,15 +137,23 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#web-enumeration">Web Enumeration</a></li>
-    <li><a href="#ftp">FTP</a></li>
+    <li><a href="#box-details">Box Details</a></li>
+    <li><a href="#recon">Recon</a>
+      <ul>
+        <li><a href="#web-enumeration">Web Enumeration</a></li>
+        <li><a href="#ftp">FTP</a></li>
+      </ul>
+    </li>
     <li><a href="#rsync--authorized_keys--usertxt">Rsync-&gt; authorized_keys-&gt; User.txt</a>
       <ul>
         <li><a href="#script-in-python">Script in Python</a></li>
       </ul>
     </li>
-    <li><a href="#shell-as-roy">Shell as roy</a></li>
-    <li><a href="#postgresql-exploit"><strong>Postgresql Exploit</strong></a></li>
+    <li><a href="#shell-as-roy">Shell as roy</a>
+      <ul>
+        <li><a href="#postgresql-exploit">Postgresql Exploit</a></li>
+      </ul>
+    </li>
     <li><a href="#logger---sql---superuser-roy">Logger -&gt; Sql -&gt; Superuser roy</a></li>
     <li><a href="#command-injection---postgres-shell">Command Injection -&gt; Postgres shell</a></li>
     <li><a href="#postgres---root">Postgres -&gt; Root</a></li>
@@ -154,7 +162,7 @@
             </div><div class="content" id="content"><hr>
 <h1 id="htbzetta">HTB:Zetta</h1>
 <p>Zetta box was the hardest box till I have done. It falls under linux and hard category. Especially to read the root flag is a quite tough one. I&rsquo;ll approach this write-up how I solved it, along with the problems that I had to face during this box. At first I obtained the user flag using ipv6 and rsync service by uploading my authorized_keys then I used postgres along with logger to read root.txt .I&rsquo;ll show all my payload(including that didn&rsquo;t work in initial deployment to get the root).</p>
-<h1 id="box-details">Box Details</h1>
+<h2 id="box-details">Box Details</h2>
 <p><figure><a class="lightgallery" href="/zetta/public/images/description_box.png" title="description of the box" data-thumbnail="/zetta/public/images/description_box.png" data-sub-html="<h2>Description of the box</h2><p>description of the box</p>">
         <img
             class="lazyload"
@@ -167,7 +175,7 @@
     </figure></p>
 <p>In above picture it&rsquo;s ip is <code>10.10.10.156</code>, I added it to <code>/etc/hosts</code> as <code>zetta.htb</code>. Let&rsquo;s solve this box.</p>
 <hr>
-<h1 id="recon">Recon</h1>
+<h2 id="recon">Recon</h2>
 <p>Let&rsquo;s start with our universal port scanner <code>nmap</code> to see the open port and service which shows FTP(TCP 21),SSH(TCP 22) and HTTP(TCP 80).</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -213,7 +221,7 @@ Nmap <span class="k">done</span> at Sat Jan <span class="m">25</span> 22:30:28 <
 
 </code></pre></td></tr></table>
 </div>
-</div><h2 id="web-enumeration">Web Enumeration</h2>
+</div><h3 id="web-enumeration">Web Enumeration</h3>
 <p><strong><em>zetta.htb</em></strong></p>
 <p>After I noticed port 80 <code>http</code> opened I visited that site and got this as output.</p>
 <p><figure><a class="lightgallery" href="/zetta/public/images/front_page.jpg" title="Front Page" data-thumbnail="/zetta/public/images/front_page.jpg" data-sub-html="<h2>Front Page</h2><p>Front Page</p>">
@@ -233,7 +241,7 @@ Native FTP We support native FTP with FXP enabled. We also support RFC2428.</p>
 </blockquote>
 <p>and also the credentials username/password for FTP service as below.
 ![Details of FTP](public/images/ftp_details.jpg &ldquo;Details of FTP)</p>
-<h2 id="ftp">FTP</h2>
+<h3 id="ftp">FTP</h3>
 <p>With this detail I m into the <code>FTP</code> server now as.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -520,7 +528,7 @@ roy@zetta:~$ cat user.txt
 a575bdb*************************
 </code></pre></td></tr></table>
 </div>
-</div><h2 id="postgresql-exploit"><strong>Postgresql Exploit</strong></h2>
+</div><h3 id="postgresql-exploit">Postgresql Exploit</h3>
 <p>After I got user.txt i.e. roy shell ,I found .tudu.xml file in home directory of roy where many to do list was written.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -985,7 +993,8 @@ Tweet about this writeup if you like.</p>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/welcomeblog/" class="prev" rel="prev" title="Welcome to my blog"><i class="fas fa-angle-left fa-fw"></i>Welcome to my blog</a></div>
+    <div class="post-nav"><a href="/welcomeblog/" class="prev" rel="prev" title="Welcome to my blog"><i class="fas fa-angle-left fa-fw"></i>Welcome to my blog</a>
+            <a href="/scavenger/" class="next" rel="next" title="Scavenger">Scavenger<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
