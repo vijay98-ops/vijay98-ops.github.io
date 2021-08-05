@@ -3,7 +3,21 @@
         <title>linux - Tag - gr4n173</title>
         <link>http://example.com/tags/linux/</link>
         <description>linux - Tag - gr4n173</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 04 Apr 2020 17:55:28 &#43;0800</lastBuildDate><atom:link href="http://example.com/tags/linux/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 13 Apr 2020 09:45:01 &#43;0800</lastBuildDate><atom:link href="http://example.com/tags/linux/" rel="self" type="application/rss+xml" /><item>
+    <title>VirSecCon CTF &#34;Scripting Challenges&#34;</title>
+    <link>http://example.com/virsecctf_scripting/</link>
+    <pubDate>Mon, 13 Apr 2020 09:45:01 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>http://example.com/virsecctf_scripting/</guid>
+    <description><![CDATA[<p>Here, I will explain about all the challenges that I solved from scriting category.</p>]]></description>
+</item><item>
+    <title>VirSecCon CTF &#34;Steganography Challenges&#34;</title>
+    <link>http://example.com/virsecctf_steganograhy/</link>
+    <pubDate>Tue, 07 Apr 2020 19:29:01 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>http://example.com/virsecctf_steganograhy/</guid>
+    <description><![CDATA[<p>Here I will explain the about steganography challenges that I solved and tools used.</p>]]></description>
+</item><item>
     <title>Nephack 3.0</title>
     <link>http://example.com/nephack3/</link>
     <pubDate>Sat, 07 Mar 2020 23:29:01 &#43;0800</pubDate>

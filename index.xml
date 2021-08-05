@@ -6,6 +6,41 @@
         <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 22 Nov 2020 17:00:49 &#43;0900</lastBuildDate>
             <atom:link href="http://example.com/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>VirSecCon CTF &#34;Scripting Challenges&#34;</title>
+    <link>http://example.com/virsecctf_scripting/</link>
+    <pubDate>Mon, 13 Apr 2020 09:45:01 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>http://example.com/virsecctf_scripting/</guid>
+    <description><![CDATA[<p>Here, I will explain about all the challenges that I solved from scriting category.</p>]]></description>
+</item><item>
+    <title>VirSecCon CTF &#34;Steganography Challenges&#34;</title>
+    <link>http://example.com/virsecctf_steganograhy/</link>
+    <pubDate>Tue, 07 Apr 2020 19:29:01 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>http://example.com/virsecctf_steganograhy/</guid>
+    <description><![CDATA[<p>Here I will explain the about steganography challenges that I solved and tools used.</p>]]></description>
+</item><item>
+    <title>VirSecCon2020</title>
+    <link>http://example.com/virseccon/</link>
+    <pubDate>Mon, 06 Apr 2020 19:29:01 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>http://example.com/virseccon/</guid>
+    <description><![CDATA[<p>Virtual Security Conference known as VirSecCon2020 and my ranking in VSCCTF.</p>]]></description>
+</item><item>
+    <title>Sniper</title>
+    <link>http://example.com/sniper/</link>
+    <pubDate>Sat, 28 Mar 2020 23:29:01 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>http://example.com/sniper/</guid>
+    <description><![CDATA[<p>Sniper box was easy box. It falls under windows and medium category. Here I will explain my path for Sniper box from Hack The Box.</p>]]></description>
+</item><item>
+    <title>OAuth 2</title>
+    <link>http://example.com/oauth2/</link>
+    <pubDate>Sun, 22 Mar 2020 20:29:01 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>http://example.com/oauth2/</guid>
+    <description><![CDATA[<p>Here I will explain detail about the OAuth 2 .</p>]]></description>
+</item><item>
     <title>Nephack 3.0</title>
     <link>http://example.com/nephack3/</link>
     <pubDate>Sat, 07 Mar 2020 23:29:01 &#43;0800</pubDate>
@@ -40,12 +75,5 @@
     <author>Author</author>
     <guid>http://example.com/moee-1/</guid>
     <description><![CDATA[<p>Details about the first part of <code>Moee</code> Series.</p>]]></description>
-</item><item>
-    <title>Registry</title>
-    <link>http://example.com/registery/</link>
-    <pubDate>Sat, 04 Apr 2020 17:55:28 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>http://example.com/registery/</guid>
-    <description><![CDATA[<p><code>Registry</code> box was the hard box. It falls under linux and hard category.Especially to read the root flag was a quite tough one. I’ll approach this write-up how I solved it, along with the problems that I had to face during this box.</p>]]></description>
 </item></channel>
 </rss>
