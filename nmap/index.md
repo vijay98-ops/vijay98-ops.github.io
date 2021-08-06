@@ -496,7 +496,7 @@ Service detection performed. Please report any incorrect results at https://nmap
 Nmap done: 1 IP address (1 host up) scanned in 172.89 seconds
 ```
 ## Conclusion 
-Having the idea to use `nmap` precisely plays a great role for penetration testers due to its ease of use, accuracy, flexibility and high performance. Though you can find many `nmap cheat sheets` you can refer to them. I have blogged this just to keep as further reference for myself, though you can refer to this too. 
+Having the idea to use `nmap` precisely plays a great role for penetration testers due to its ease of use, accuracy, flexibility and high performance. Though you can find many `nmap cheat sheets` you can refer to them. I have blogged this just to keep as further reference for myself. If you have any problem related to the functionality of `nmap` then you can visit the main page of nmap.
 Thanks for staying with me throughout this blog and hope you have learned some new techniques.
 
 ## Resources
