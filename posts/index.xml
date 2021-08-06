@@ -3,7 +3,14 @@
         <title>All Posts - gr4n173</title>
         <link>http://example.com/posts/</link>
         <description>All Posts | gr4n173</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 22 Nov 2020 17:00:49 &#43;0900</lastBuildDate><atom:link href="http://example.com/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 06 Aug 2021 23:29:01 &#43;0800</lastBuildDate><atom:link href="http://example.com/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Nmap Cheat Sheet</title>
+    <link>http://example.com/nmap/</link>
+    <pubDate>Fri, 06 Aug 2021 23:29:01 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>http://example.com/nmap/</guid>
+    <description><![CDATA[<p>I will describe the <code>nmap</code> tool in detail and ways to use the tool precisely especially for penetration testers.</p>]]></description>
+</item><item>
     <title>Pwn Ret2Libc</title>
     <link>http://example.com/ret2libc/</link>
     <pubDate>Sat, 11 Jul 2020 21:29:01 &#43;0800</pubDate>
@@ -66,12 +73,5 @@
     <author>Author</author>
     <guid>http://example.com/sniper/</guid>
     <description><![CDATA[<p>Sniper box was easy box. It falls under windows and medium category. Here I will explain my path for Sniper box from Hack The Box.</p>]]></description>
-</item><item>
-    <title>OAuth 2</title>
-    <link>http://example.com/oauth2/</link>
-    <pubDate>Sun, 22 Mar 2020 20:29:01 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>http://example.com/oauth2/</guid>
-    <description><![CDATA[<p>Here I will explain detail about the OAuth 2 .</p>]]></description>
 </item></channel>
 </rss>

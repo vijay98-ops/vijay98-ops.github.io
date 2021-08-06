@@ -3,7 +3,14 @@
         <title>linux - Tag - gr4n173</title>
         <link>http://example.com/tags/linux/</link>
         <description>linux - Tag - gr4n173</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 11 Jul 2020 21:29:01 &#43;0800</lastBuildDate><atom:link href="http://example.com/tags/linux/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 06 Aug 2021 23:29:01 &#43;0800</lastBuildDate><atom:link href="http://example.com/tags/linux/" rel="self" type="application/rss+xml" /><item>
+    <title>Nmap Cheat Sheet</title>
+    <link>http://example.com/nmap/</link>
+    <pubDate>Fri, 06 Aug 2021 23:29:01 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>http://example.com/nmap/</guid>
+    <description><![CDATA[<p>I will describe the <code>nmap</code> tool in detail and ways to use the tool precisely especially for penetration testers.</p>]]></description>
+</item><item>
     <title>Pwn Ret2Libc</title>
     <link>http://example.com/ret2libc/</link>
     <pubDate>Sat, 11 Jul 2020 21:29:01 &#43;0800</pubDate>
@@ -66,12 +73,5 @@
     <author>Author</author>
     <guid>http://example.com/scavenger/</guid>
     <description><![CDATA[<p>Scavenger box was the hardes after <a href="https://gr4n173.github.io/zetta" target="_blank" rel="noopener noreffer">Zetta</a> box. It falls under linux and hard category. Here I will explain my path for Scavenger box from the Hack The Box.</p>]]></description>
-</item><item>
-    <title>Zetta</title>
-    <link>http://example.com/zetta/</link>
-    <pubDate>Sat, 22 Feb 2020 20:29:01 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>http://example.com/zetta/</guid>
-    <description><![CDATA[<p>Zetta box was the hardes box till I have done. It falls under linux and hard category. Here I will explain my path for Zetta box from the Hack The Box.</p>]]></description>
 </item></channel>
 </rss>
