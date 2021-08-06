@@ -3,7 +3,21 @@
         <title>htb - Tag - gr4n173</title>
         <link>http://example.com/tags/htb/</link>
         <description>htb - Tag - gr4n173</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 04 Apr 2020 17:55:28 &#43;0800</lastBuildDate><atom:link href="http://example.com/tags/htb/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 16 May 2020 21:29:01 &#43;0800</lastBuildDate><atom:link href="http://example.com/tags/htb/" rel="self" type="application/rss+xml" /><item>
+    <title>Patents</title>
+    <link>http://example.com/patents/</link>
+    <pubDate>Sat, 16 May 2020 21:29:01 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>http://example.com/patents/</guid>
+    <description><![CDATA[<p>Patents was a hard Hard box. It falls under linux and hard category. Especially to get the root was the tough one where I had to build my own script to exploit the <code>ROP</code> in the server.</p>]]></description>
+</item><item>
+    <title>Mango</title>
+    <link>http://example.com/mango/</link>
+    <pubDate>Sat, 18 Apr 2020 19:29:01 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>http://example.com/mango/</guid>
+    <description><![CDATA[<p>Mango box was the medium box. It falls under linux and medium category. Especially to get user flag was a quite difficult one. I will explain my path for Mango box from Hack The Box.</p>]]></description>
+</item><item>
     <title>Sniper</title>
     <link>http://example.com/sniper/</link>
     <pubDate>Sat, 28 Mar 2020 23:29:01 &#43;0800</pubDate>
